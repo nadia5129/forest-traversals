@@ -129,6 +129,13 @@ public class TreeProblems {
     if(tree == null){
       return 0;
     }
+    int sum = 0;
+
+    for(Integer node : tree.ketSet()){
+      sum += node;
+    }
+    return sum;
+
   }
 
   /*
