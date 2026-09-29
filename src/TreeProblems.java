@@ -160,7 +160,16 @@ public class TreeProblems {
    Hint: No recursion needed! Think about how you would do this by hand.
   */
   public static <T> T findRoot(Map<T, List<T>> tree) {
-     Set<T> children = new HashSet<>();
+    Set<T> children = new HashSet<>();
+    for (List<T> childList : tree.values()) {
+      children.addAll(childList);
+    }
+    for (T node : tree.keySet()) {
+    if (!children.contains(node)) {
+      return node;
+    }
+    }
+    return null;
   }
 
   /*
