@@ -31,6 +31,9 @@ public class TreeProblems {
     if(root == null){
       return;
     }
+    for( Node<T> child: root.children){
+
+    }
 
 
   }
