@@ -191,7 +191,9 @@ public class TreeProblems {
    
   */
   public static <T> int maxDepth(Node<T> root) {
-    return -1;
+    if( root == null){
+      return 0;
+    }
   }
 
   /*
@@ -213,6 +215,6 @@ public class TreeProblems {
    Hint: Use findRoot to start. Then, make a recursive helper method.
   */
   public static int maxDepth(Map<String, List<String>> tree) {
-    return -1;
+    
   }
 }
