@@ -194,6 +194,11 @@ public class TreeProblems {
     if( root == null){
       return 0;
     }
+    int maxChildDepth = 0;
+
+    for(Node<T> child : root.childern){
+      
+    }
   }
 
   /*
