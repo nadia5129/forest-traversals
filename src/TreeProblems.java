@@ -95,7 +95,15 @@ public class TreeProblems {
     if(root == null ){
       return 0;
     }
-    
+    int sum =root.value;
+
+    for( Node<Integer> child : root.children){
+      sumTree(child);
+      sum += sumTree(child);
+    }
+    return sum;
+
+
   }
 
   /*
