@@ -221,6 +221,9 @@ public class TreeProblems {
    Hint: Use findRoot to start. Then, make a recursive helper method.
   */
   public static int maxDepth(Map<String, List<String>> tree) {
+     if (tree == null || tree.isEmpty()) {
+        return 0;
+    }
     
   }
 }
