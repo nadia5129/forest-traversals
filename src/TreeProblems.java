@@ -133,7 +133,7 @@ public class TreeProblems {
     }
     int sum = 0;
 
-    for(Integer node : tree.ketSet()){
+    for(Integer node : tree.keySet()){
       sum += node;
     }
     return sum;
@@ -196,9 +196,10 @@ public class TreeProblems {
     }
     int maxChildDepth = 0;
 
-    for(Node<T> child : root.childern){
-      
+    for(Node<T> child : root.children){
+      maxChildDepth = Math.max(maxChildDepth, maxDepth(child));
     }
+    return 1 + maxChildDepth;
   }
 
   /*
