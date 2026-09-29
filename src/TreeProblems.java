@@ -32,10 +32,11 @@ public class TreeProblems {
       return;
     }
     for( Node<T> child: root.children){
-
+      postOrder(child);
     }
+    System.out.println(root.value);
 
-
+    
   }
 
   /*
