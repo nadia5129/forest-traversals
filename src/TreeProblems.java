@@ -66,11 +66,9 @@ public class TreeProblems {
    5
    */
   public static <T> void postOrder(Map<T, List<T>> tree, T root) {
-    if( root == null || !tree.containsKey(root)){
+    if( tree == null || !tree.containsKey(root)){
       return;
     }
-
-    tree.get(root);
     for( T child : tree.get(root)){
       postOrder(tree, child);
     }
@@ -100,7 +98,6 @@ public class TreeProblems {
     int sum =root.value;
 
     for( Node<Integer> child : root.children){
-      sumTree(child);
       sum += sumTree(child);
     }
     return sum;
@@ -235,7 +232,12 @@ public class TreeProblems {
 
     for(String child : tree.get(root)){
         int depth = maxDepthHelper(tree, child);
+
+        if (depth > max){
+          max = depth;
+        }
        }
+       return max +1;
     }
     
   }
