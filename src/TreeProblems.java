@@ -67,7 +67,13 @@ public class TreeProblems {
     if( root == null || !tree.containsKey(root)){
       return;
     }
-    
+
+    tree.get(root);
+    for( T child : tree.get(root)){
+      postOrder(tree, child);
+    }
+    System.out.println(root);
+
 
   }
 
